@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js.js"></script>
+</head>
+
+<body>
+  <div class="columns is-tablet">
+    <div class="column is-one-fifth"></div>
+    <div class="column custom-color">
+      <form onsubmit="return false" id="form">
+        <div class="field select-registration">
+          <label class="label">Вы регистрируетесь как</label>
+          <div>
+            <label class="label">
+              <input type="radio" name="answer" value="buyer" onChange="checkRoleRegistration(this)" checked>
+              Покупатель
+            </label>
+          </div>
+          <div>
+            <label class="label">
+              <input type="radio" name="answer" value="vendor" onChange="checkRoleRegistration(this)">
+              Поставщик
+            </label>
+          </div>
+        </div>
+
+        <div class="field is-horizontal ">
+          <div class="field-label is-normal">
+            <p>Эл.почта</p>
+          </div>
+          <div class="field-body ">
+            <input class="input" type="email" name="email" required>
+            <div class="column is-half"></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Название организации</label>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p>ИП или Юр.лицо</p>
+            </div>
+            <div class="field-body">
+              <input class="input" required>
+              <div class="column is-half"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p>ИНН</p>
+            </div>
+            <div class="field-body">
+              <input class="input" required>
+              <div class="column is-half"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Фактический адрес</label>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p>Ваш город</p>
+            </div>
+            <div class="field-body">
+              <input class="input" required>
+              <div class="column is-half"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <p>Улица</p>
+          </div>
+          <div class="field-body ">
+            <div class="column pt-0" style="padding: 0;">
+              <div class="columns">
+                <div class="column is-one-quarter" style="padding: 0;">
+                  <input class="input">
+                </div>
+                <div class="field is-horizontal column is-one-quarter is-offset-1" style="padding: 0;">
+                  <p class="field-label is-normal">Дом</p>
+                  <input class="input">
+                </div>
+                <div class="field is-horizontal column is-one-fifth is-offset-1" style="padding: 0;">
+                  <p class="field-label is-normal">Офис</p>
+                  <input class="input">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <p>Телефон</p>
+          </div>
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <a class="button is-static">
+                  +7
+                </a>
+                <p class="control is-expanded">
+                  <input class="input" type="tel" required>
+                </p>
+                <div class="column is-half"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field" id="company-site" style="display: none;">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p>Сайт вашей компании</p>
+            </div>
+            <div class="field-body">
+              <input class="input">
+              <div class="column is-half"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Виды деятельности</label>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p class="">
+                Магазин
+              </p>
+            </div>
+            <div class="field-body">
+              <div class="field pt-2">
+                <input type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p class="">
+                Региональная сеть магазинов
+              </p>
+            </div>
+            <div class="field-body">
+              <div class="field pt-2">
+                <input type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p class="">
+                Федеральная сеть магазинов
+              </p>
+            </div>
+            <div class="field-body">
+              <div class="field pt-2">
+                <input type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p class="">
+                Интернет-магазин
+              </p>
+            </div>
+            <div class="field-body">
+              <div class="field pt-2">
+                <input type="checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p class="">
+                Автосервис
+              </p>
+            </div>
+            <div class="field-body">
+              <div class="field pt-2">
+                <input type="checkbox">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <p>Прочее</p>
+            </div>
+            <div class="field-body">
+              <input class="input">
+              <div class="column is-half"></div>
+            </div>
+          </div>
+        </div>
+        <input type="submit" class="button is-normal is-responsive request open-popup" onclick="validateForm()"
+          value="Отправить заявку" id="edName">
+      </form>
+
+      <div class="popup__bg">
+        <form class="popup">
+          <button class="close-popup">x</button>
+          Регистрация завершена
+        </form>
+      </div>
+    </div>
+    <div class="column is-one-fifth"></div>
+  </div>
+
+</body>
+</html>

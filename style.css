@@ -1,0 +1,100 @@
+body {
+    padding: 5px 0 5px 0;
+    background: #e6e6e6;
+    font-family: 'Nunito Sans';
+}
+.columns {
+    margin: 0px !important;
+}
+
+.custom-color {
+    background: #f3f7f8;
+}
+
+label,a {
+    padding: 0 0 0 5%;
+    color: rgb(0, 0, 0) !important;
+}
+
+a {
+    font-size: 14px;
+}
+
+.submit {
+    background-color: #574b90;
+    color: #fff;
+    border: 0px;
+}
+
+.submit:hover {
+    background-color: #303952;
+    color: #fff;
+}
+
+.main-label {
+    padding-left: 0px;
+}
+
+.select-registration {
+    padding: 15px 15px 45px 15px;
+}
+
+.request {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #23669b;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#468bc5), to(#326b9b));
+    size: 24px; 
+    width: 250px;
+}
+
+@media screen and (max-width:770px) {
+    .label {
+        padding: 0 0 0 0;
+    }
+
+    .is-half {
+        display: none;
+    }
+}
+
+.popup__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
